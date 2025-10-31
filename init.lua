@@ -1,3 +1,6 @@
+-- ************************************
+-- *  Actual vim/neovim config stuff  *
+-- ************************************
 -- Tabs (tabulation)
 vim.o.tabstop=4
 vim.o.shiftwidth=4
@@ -22,4 +25,27 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
--- Plugins or whatever
+-- ************************************
+-- * Plugins or whatever ( vim-plug ) *
+-- ************************************
+local Plug = vim.fn['plug#']
+vim.call('plug#begin')
+-- Plugins
+Plug 'nvim-tree/nvim-tree.lua' -- File tree
+--Plug 'SirVer/ultisnips' -- Code snippets (engine)
+--Plug 'honza/vim-snippets' -- Code snippets (code snippets)
+-- End plugin
+vim.call('plug#end')
+-- ************************************
+-- *          Plugins config          *
+-- ************************************
+
+-- *************
+-- * nvim-tree *
+-- *************
+-- disable newrw because nvim-tree said so :DDDD
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+-- Default setup for now
+require("nvim-tree").setup()
+
