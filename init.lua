@@ -32,8 +32,9 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 -- Plugins
 Plug 'nvim-tree/nvim-tree.lua' -- File tree
---Plug 'SirVer/ultisnips' -- Code snippets (engine)
---Plug 'honza/vim-snippets' -- Code snippets (code snippets)
+Plug 'ycm-core/YouCompleteMe' -- Code completion ( requires a bunch of extra setup hggghhnn..."
+Plug 'SirVer/ultisnips' -- Code snippets (engine)
+Plug 'honza/vim-snippets' -- Code snippets (code snippets)
 -- End plugin
 vim.call('plug#end')
 -- ************************************
@@ -48,4 +49,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 -- Default setup for now
 require("nvim-tree").setup()
-
+-- *************
+-- * ultisnips *
+-- *************
+vim.g.UltiSnipsExpandTrigger = "go"
