@@ -4,8 +4,12 @@ vim.o.shiftwidth=4
 vim.o.softtabstop=0
 vim.o.expandtab=false
 -- Tabs (workspaces)
-vim.api.nvim_set_keymap("n", "<F6>",":tabp<CR>",{})
-vim.api.nvim_set_keymap("n", "<F7>",":tabn<CR>",{})
+vim.keymap.set("n", "<C-H>",":tabp<CR>") -- CTRL-H to left tab
+vim.keymap.set("n", "<C-L>",":tabn<CR>") -- CTRL-L to right tab
+vim.keymap.set("n", "mth",":tabm -1<CR>") -- CTRL-L to move tab left
+vim.keymap.set("n", "mtl",":tabm +1<CR>") -- CTRL-L to move tab right
+-- Exit terminal mode
+vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true}) -- Esc to escape terminal mode
 -- The classics
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Move text up
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Move text down
