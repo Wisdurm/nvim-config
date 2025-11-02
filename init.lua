@@ -35,21 +35,23 @@ Plug 'nvim-tree/nvim-tree.lua' -- File tree
 Plug 'ycm-core/YouCompleteMe' -- Code completion ( requires a bunch of extra setup hggghhnn..."
 Plug 'SirVer/ultisnips' -- Code snippets (engine)
 Plug 'honza/vim-snippets' -- Code snippets (code snippets)
+-- Plug 'nvim-treesitter/nvim-treesitter' -- Syntax highlighting
 -- End plugin
 vim.call('plug#end')
 -- ************************************
 -- *          Plugins config          *
 -- ************************************
-
+--
 -- *************
 -- * nvim-tree *
 -- *************
 -- disable newrw because nvim-tree said so :DDDD
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.keymap.set("n", "tre", ":NvimTreeToggle<CR>") -- Move text up
 -- Default setup for now
 require("nvim-tree").setup()
 -- *************
 -- * ultisnips *
 -- *************
-vim.g.UltiSnipsExpandTrigger = "go"
+vim.g.UltiSnipsExpandTrigger = "go" -- Type "go" to complete snippet
