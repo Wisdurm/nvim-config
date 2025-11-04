@@ -15,6 +15,8 @@ vim.keymap.set("n", "<C-H>",":tabp<CR>") -- CTRL-H to left tab
 vim.keymap.set("n", "<C-L>",":tabn<CR>") -- CTRL-L to right tab
 vim.keymap.set("n", "mth",":tabm -1<CR>") -- CTRL-L to move tab left
 vim.keymap.set("n", "mtl",":tabm +1<CR>") -- CTRL-L to move tab right
+vim.keymap.set("n", "tt", ":tabnew|:terminal<CR>") -- Opens terminal tab
+--for some reason :tab ter doesn't work on my laptop
 -- Exit terminal mode
 vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true}) -- Esc to escape terminal mode
 -- The classics
