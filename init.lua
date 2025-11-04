@@ -42,6 +42,7 @@ Plug 'ycm-core/YouCompleteMe' -- Code completion ( requires a bunch of extra set
 Plug 'SirVer/ultisnips' -- Code snippets (engine)
 Plug 'honza/vim-snippets' -- Code snippets (code snippets)
 Plug 'nvim-treesitter/nvim-treesitter' -- Syntax highlighting
+Plug 'tpope/vim-commentary' -- Code commenting
 Plug 'nvim-lualine/lualine.nvim' -- Status bar 
 Plug 'nvim-tree/nvim-web-devicons' -- Status bar icons
 -- Battery plugins and dependencies
