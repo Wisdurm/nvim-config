@@ -45,6 +45,7 @@ Plug 'nvim-treesitter/nvim-treesitter' -- Syntax highlighting
 Plug 'tpope/vim-commentary' -- Code commenting
 Plug 'nvim-lualine/lualine.nvim' -- Status bar 
 Plug 'nvim-tree/nvim-web-devicons' -- Status bar icons
+Plug 'jbyuki/instant.nvim'
 -- Battery plugins and dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -192,3 +193,7 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+-- *******************
+-- *   multiplayer   *
+-- *******************
+vim.g.instant_username = "wisdurm"
