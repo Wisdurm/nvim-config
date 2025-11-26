@@ -1,6 +1,8 @@
 -- ************************************
 -- *  Actual vim/neovim config stuff  *
 -- ************************************
+-- Line numbers
+vim.o.number = true
 -- Univeral mapping
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
