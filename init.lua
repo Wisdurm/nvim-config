@@ -8,6 +8,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 -- Color
 vim.cmd('colorscheme slate')
+vim.cmd('hi Comment guifg=#44a832')
 -- Scroll thing
 vim.opt.scrolloff = 8
 -- Folds
