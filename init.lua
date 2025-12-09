@@ -11,19 +11,31 @@ vim.cmd('colorscheme slate')
 vim.cmd('hi Comment guifg=#44a832')
 -- Scroll thing
 vim.opt.scrolloff = 8
--- Folds
-vim.o.foldlevel=2
--- Tabs (tabulation)
-vim.o.tabstop=4
+-- Faster movement
+vim.keymap.set("n", "<C-J>", "10j")
+vim.keymap.set("n", "<C-K>", "10k")
+-- Folds vim.o.foldlevel=2 Tabs (tabulation) vim.o.tabstop=4
 vim.o.shiftwidth=4
 vim.o.softtabstop=0
 vim.o.expandtab=false
+-- Hightlinting
+vim.keymap.set("n", "<leader>n", ":noh<CR>") -- Clear highlight
 -- Tabs (workspaces)
 vim.keymap.set("n", "<C-H>",":tabp<CR>") -- CTRL-H to left tab
 vim.keymap.set("n", "<C-L>",":tabn<CR>") -- CTRL-L to right tab
 vim.keymap.set("n", "mth",":tabm -1<CR>") -- CTRL-L to move tab left
 vim.keymap.set("n", "mtl",":tabm +1<CR>") -- CTRL-L to move tab right
 vim.keymap.set("n", "tt", ":tabnew|:terminal<CR>") -- Opens terminal tab
+-- Quick tab switching
+vim.keymap.set("n", "<leader>1", "1gt")
+vim.keymap.set("n", "<leader>2", "2gt")
+vim.keymap.set("n", "<leader>3", "3gt")
+vim.keymap.set("n", "<leader>4", "4gt")
+vim.keymap.set("n", "<leader>5", "5gt")
+vim.keymap.set("n", "<leader>6", "6gt")
+vim.keymap.set("n", "<leader>7", "7gt")
+vim.keymap.set("n", "<leader>8", "8gt")
+vim.keymap.set("n", "<leader>9", "9gt")
 --for some reason :tab ter doesn't work on my laptop
 -- Exit terminal mode
 vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true}) -- Esc to escape terminal mode
@@ -31,6 +43,8 @@ vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true}) -- Esc to esca
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Move text up
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Move text down
 vim.keymap.set("n", "sex", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- Replace all instances of selected word
+-- Custom stuff
+vim.keymap.set("n", "nul", ':%s/<C-R>0//g<Left><Left>') -- Replace yanked text
 -- Highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlights text when yanking",
