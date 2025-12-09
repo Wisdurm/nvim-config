@@ -14,7 +14,10 @@ vim.opt.scrolloff = 8
 -- Faster movement
 vim.keymap.set("n", "<C-J>", "10j")
 vim.keymap.set("n", "<C-K>", "10k")
--- Folds vim.o.foldlevel=2 Tabs (tabulation) vim.o.tabstop=4
+-- Folds
+vim.o.foldlevel=2
+-- Tabs (tabulation)
+vim.o.tabstop=4
 vim.o.shiftwidth=4
 vim.o.softtabstop=0
 vim.o.expandtab=false
