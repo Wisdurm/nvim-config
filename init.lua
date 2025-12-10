@@ -23,6 +23,8 @@ vim.o.softtabstop=0
 vim.o.expandtab=false
 -- Hightlinting
 vim.keymap.set("n", "<leader>n", ":noh<CR>") -- Clear highlight
+-- Rename symbol (ycm)
+vim.keymap.set("n", "<leader>rn", ":YcmCompleter RefactorRename ")
 -- Tabs (workspaces)
 vim.keymap.set("n", "<C-H>",":tabp<CR>") -- CTRL-H to left tab
 vim.keymap.set("n", "<C-L>",":tabn<CR>") -- CTRL-L to right tab
