@@ -49,7 +49,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Move text up
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Move text down
 vim.keymap.set("n", "sex", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- Replace all instances of selected word
 -- Custom stuff
-vim.keymap.set("n", "nul", ':%s/<C-R>0//g<Left><Left>') -- Replace yanked text
+vim.keymap.set("n", "<leader>sex", ':%s/<C-R>0//g<Left><Left>') -- Replace yanked text
 -- Highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlights text when yanking",
