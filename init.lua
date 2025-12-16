@@ -75,6 +75,7 @@ Plug 'nvim-lualine/lualine.nvim' -- Status bar
 Plug 'nvim-tree/nvim-web-devicons' -- Status bar icons
 Plug 'jbyuki/instant.nvim' -- Multiplayer (doesn't work)
 Plug 'xiyaowong/transparent.nvim' -- Transparent background
+Plug 'sakhnik/nvim-gdb' -- Gdb integration
 -- Telescope
 Plug 'nvim-telescope/telescope.nvim' -- find files
 -- Battery plugins and dependencies
