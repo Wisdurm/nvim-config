@@ -31,6 +31,7 @@ vim.keymap.set("n", "<C-L>",":tabn<CR>") -- CTRL-L to right tab
 vim.keymap.set("n", "mth",":tabm -1<CR>") -- CTRL-L to move tab left
 vim.keymap.set("n", "mtl",":tabm +1<CR>") -- CTRL-L to move tab right
 vim.keymap.set("n", "tt", ":tabnew|:terminal<CR>") -- Opens terminal tab
+vim.keymap.set("n", "<leader>m", ":tabm ") -- Opens terminal tab
 -- Quick tab switching
 vim.keymap.set("n", "<leader>1", "1gt")
 vim.keymap.set("n", "<leader>2", "2gt")
