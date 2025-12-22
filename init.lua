@@ -76,12 +76,13 @@ Plug 'nvim-tree/nvim-web-devicons' -- Status bar icons
 Plug 'jbyuki/instant.nvim' -- Multiplayer (doesn't work)
 Plug 'xiyaowong/transparent.nvim' -- Transparent background
 Plug 'sakhnik/nvim-gdb' -- Gdb integration
+Plug 'OXY2DEV/markview.nvim' -- Markdown preview
 -- Telescope
 Plug 'nvim-telescope/telescope.nvim' -- find files
 -- Battery plugins and dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'justinhj/battery.nvim'
+Plug 'justinhj/battery.nvim' -- Show battery percentage
 -- End plugin
 vim.call('plug#end')
 -- ************************************
