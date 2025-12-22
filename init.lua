@@ -95,8 +95,29 @@ vim.call('plug#end')
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.keymap.set("n", "tre", ":NvimTreeToggle<CR>") -- Move text up
--- Default setup for now
-require("nvim-tree").setup()
+vim.opt.termguicolors = true
+require("nvim-tree").setup({
+  git = {
+        enable = true,
+    },
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+    icons = {
+        show = {
+            git = true,
+            },
+        },
+  },
+  filters = {
+    dotfiles = false,
+  },
+})
 -- *************
 -- * ultisnips *
 -- *************
