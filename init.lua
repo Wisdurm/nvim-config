@@ -23,8 +23,6 @@ vim.o.softtabstop=0
 vim.o.expandtab=false
 -- Hightlinting
 vim.keymap.set("n", "<leader>n", ":noh<CR>") -- Clear highlight
--- Rename symbol (ycm)
-vim.keymap.set("n", "<leader>rn", ":YcmCompleter RefactorRename ")
 -- Tabs (workspaces)
 vim.keymap.set("n", "<C-H>",":tabp<CR>") -- CTRL-H to left tab
 vim.keymap.set("n", "<C-L>",":tabn<CR>") -- CTRL-L to right tab
@@ -289,3 +287,10 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+-- *******************
+-- *       ycm       *
+-- *******************
+vim.g.ycm_collect_identifiers_from_tags_files = 1 -- Load tags (some code info idk)
+vim.keymap.set("n", "<leader>rn", ":YcmCompleter RefactorRename ") -- Rename symbol
+vim.keymap.set("n", "<leader>df", ":YcmCompleter GoToDefinition<CR>") -- Go to definition
+vim.keymap.set("n", "<leader>dc", ":YcmCompleter GoToDeclaration<CR>") -- Go to definition
