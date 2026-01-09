@@ -81,6 +81,8 @@ Plug 'nvim-telescope/telescope.nvim' -- find files
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'justinhj/battery.nvim' -- Show battery percentage
+-- Hietala törky
+Plug 'LukaHietala/nvim-share' -- multiplayer (maybe works)
 -- End plugin
 vim.call('plug#end')
 -- ************************************
@@ -127,7 +129,7 @@ vim.g.UltiSnipsExpandTrigger = "go" -- Type "go" to complete snippet
 -- Folding or something lol idk :shrug:
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-require'nvim-treesitter.configs'.setup {
+require'nvim-treesitter'.setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "cpp", "php", "html", "javascript" },
 
