@@ -9,3 +9,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # TODO
 # Compile ycm
 # TODO
+# Patch php snippets to include html snippets
+# TODO
