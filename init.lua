@@ -83,6 +83,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'justinhj/battery.nvim' -- Show battery percentage
 -- Hietala törky
 Plug 'LukaHietala/nvim-share' -- multiplayer (maybe works)
+Plug 'LukaHietala/cesp'
 -- End plugin
 vim.call('plug#end')
 -- ************************************
@@ -292,7 +293,35 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 -- *******************
 -- *       ycm       *
 -- *******************
+vim.g.python3_host_prog = '/usr/bin/python3'
+vim.g.ycm_python_binary_path = 'python'
 vim.g.ycm_collect_identifiers_from_tags_files = 1 -- Load tags (some code info idk)
 vim.keymap.set("n", "<leader>rn", ":YcmCompleter RefactorRename ") -- Rename symbol
 vim.keymap.set("n", "<leader>df", ":YcmCompleter GoToDefinition<CR>") -- Go to definition
 vim.keymap.set("n", "<leader>dc", ":YcmCompleter GoToDeclaration<CR>") -- Go to definition
+
+
+-- ksibid
+require("nvim-tcp").setup({
+    -- The port to run the server on
+	port = 8080,            
+    -- Your name visible to other clients
+	name = "Jaakko Pekka",         
+	cursor_name = {
+        -- The position of names assigned to cursors.
+        -- Options are:
+            -- follow: shows next to the cursor
+            -- eol: right after eol character
+            -- eol_right_align: display right aligned in the window unless the virtual text is longer than the space available. If the virtual text is too long, it is truncated to fit in the window after the EOL character. If the line is wrapped, the virtual text is shown after the end of the line rather than the previous screen line.
+            -- overlay: display over the specified column, without shifting the underlying text.
+            -- right_align: display right aligned in the window.
+            -- inline: display at the specified column, and shift the buffer text to the right as needed. 
+		pos = "follow",
+        -- The highlight group for the cursor name
+		hl_group = "Cursor"
+	}
+})
+--pierojgiergjreiojoi
+require("cesp").setup({
+	name = "vittu"
+})
