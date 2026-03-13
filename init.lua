@@ -7,8 +7,8 @@ vim.o.number = true
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 -- Color
-vim.cmd('colorscheme slate')
-vim.cmd('hi Comment guifg=#44a832')
+vim.cmd('colorscheme zaibatsu')
+--vim.cmd('hi Comment guifg=#44a832')
 -- Scroll thing
 vim.opt.scrolloff = 8
 -- Faster movement
@@ -16,6 +16,8 @@ vim.keymap.set("n", "<C-J>", "10j")
 vim.keymap.set("n", "<C-K>", "10k")
 -- Folds
 vim.o.foldlevel=2
+-- Copy line to clipboard
+vim.keymap.set("n", "<leader>y", "\"+yyk<CR>") -- Clear highlight
 -- Tabs (tabulation)
 vim.o.tabstop=4
 vim.o.shiftwidth=4
@@ -75,6 +77,7 @@ Plug 'jbyuki/instant.nvim' -- Multiplayer (doesn't work)
 Plug 'xiyaowong/transparent.nvim' -- Transparent background
 Plug 'sakhnik/nvim-gdb' -- Gdb integration
 Plug 'OXY2DEV/markview.nvim' -- Markdown preview
+Plug 'easymotion/vim-easymotion' -- Movement
 -- Telescope
 Plug 'nvim-telescope/telescope.nvim' -- find files
 -- Battery plugins and dependencies
